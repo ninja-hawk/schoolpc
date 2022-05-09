@@ -1,0 +1,90 @@
+#include <kernel.h>
+#include "kernel_cfg.h"
+#include "app.h"
+
+#include "mbed.h"
+
+#include "app_config.h"
+
+#include "Zumo.h"
+#include "Milkcocoa.h"
+
+extern void onpush(MQTT::MessageData& md);
+Serial pc(USBTX, USBRX);
+Zumo zumo;
+
+static int speed = 120;
+static int steer = 0;
+
+void onpush(MQTT::MessageData& md)
+{
+	pc.printf("onpush\n\r");
+    MQTT::Message &message = md.message;
+    DataElement de = DataElement((char*)message.payload);
+	int v = de.getInt("z");
+}
+
+
+
+void task_main(intptr_t exinf) {
+
+	while(1){
+		pc.baud(9600);
+		IrBitField_T irbits;
+		zumo.readIr(irbits);
+		pc.printf("r:%d, c:%d, l:%d \r\n",
+				irbits.right, irbits.center, irbits.left);
+
+		if (irbits.center < 0) {
+			if(irbits.left < 0){
+				if(irbits.right < 0){
+					//8’âŽ~
+					zumo.driveTank(0, 0);
+					break;
+				}
+				else{
+					//7¶¬
+					zumo.driveTank(speed*0.4, speed);
+				}
+			}
+			else{
+				if(irbits.right < 0){
+					//4‰E¬
+					zumo.driveTank(speed, speed*0.4);
+				}
+				else{
+					//3’¼‘å
+					zumo.driveTank(speed, speed);
+				}
+
+			}
+		} else {
+			if(irbits.left < 0){
+				if(irbits.right < 0){
+					//6’¼¬
+					zumo.driveTank(speed, speed);
+				}
+				else{
+					//5¶‘å
+					zumo.driveTank(speed*0.1, speed);
+				}
+			}
+			else{
+				if(irbits.right < 0){
+					//2‰E‘å
+					zumo.driveTank(speed, speed*0.1);
+				}
+				else{
+					//3’¼¬
+					zumo.driveTank(speed, speed);
+				}
+
+			}
+		}
+		dly_tsk(5);
+	}
+
+
+
+
+}
