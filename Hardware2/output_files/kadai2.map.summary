@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed May 11 15:47:47 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : kadai2
+Top-level Entity Name : kadai2
+Family : Cyclone IV E
+Total logic elements : 96
+    Total combinational functions : 87
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 152
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
