@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kadai3
-Wed May 11 17:03:58 2022
+Thu May 12 16:10:05 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,7 +10,17 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "decode_7seg:decode_7seg_inst"
+ 12. Port Connectivity Checks: "led_driver:led_driver_inst"
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +46,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 11 17:03:58 2022           ;
+; Analysis & Synthesis Status        ; Successful - Thu May 12 16:10:05 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; kadai3                                      ;
 ; Top-level Entity Name              ; kadai3                                      ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 68                                          ;
+;     Total combinational functions  ; 59                                          ;
+;     Dedicated logic registers      ; 34                                          ;
+; Total registers                    ; 34                                          ;
+; Total pins                         ; 152                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -148,11 +158,172 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+; ../../hw2019/verilog-src/public/led_driver.v     ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/led_driver.v     ;         ;
+; ../../hw2019/verilog-src/public/kadai3.v         ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/kadai3.v         ;         ;
+; ../../hw2019/verilog-src/templates/decode_7seg.v ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/decode_7seg.v ;         ;
+; ../../hw2019/verilog-src/templates/udcount4.v    ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/udcount4.v    ;         ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 68          ;
+;                                             ;             ;
+; Total combinational functions               ; 59          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 13          ;
+;     -- 3 input functions                    ; 15          ;
+;     -- <=2 input functions                  ; 31          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 42          ;
+;     -- arithmetic mode                      ; 17          ;
+;                                             ;             ;
+; Total registers                             ; 34          ;
+;     -- Dedicated logic registers            ; 34          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 152         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 34          ;
+; Total fan-out                               ; 453         ;
+; Average fan-out                             ; 1.14        ;
++---------------------------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                              ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                  ; Entity Name ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+-------------+--------------+
+; |kadai3                           ; 59 (0)              ; 34 (0)                    ; 0           ; 0            ; 0       ; 0         ; 152  ; 0            ; |kadai3                              ; kadai3      ; work         ;
+;    |decode_7seg:decode_7seg_inst| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kadai3|decode_7seg:decode_7seg_inst ; decode_7seg ; work         ;
+;    |led_driver:led_driver_inst|   ; 44 (44)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kadai3|led_driver:led_driver_inst   ; led_driver  ; work         ;
+;    |udcount4:udcount4_inst|       ; 8 (8)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kadai3|udcount4:udcount4_inst       ; udcount4    ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 34    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 34    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; led_driver:led_driver_inst|rk_state[0]   ; 4       ;
+; led_driver:led_driver_inst|seg7_state[0] ; 2       ;
+; Total number of inverted registers = 2   ;         ;
++------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; No         ; |kadai3|led_driver:led_driver_inst|seg_y[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decode_7seg:decode_7seg_inst"                                                                                                                                           ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                                               ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; out    ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (9 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; out[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                   ;
++--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "led_driver:led_driver_inst" ;
++------------+-------+----------+------------------------+
+; Port       ; Type  ; Severity ; Details                ;
++------------+-------+----------+------------------------+
+; seg7_a     ; Input ; Info     ; Stuck at GND           ;
+; seg7_b     ; Input ; Info     ; Stuck at GND           ;
+; seg7_c     ; Input ; Info     ; Stuck at GND           ;
+; seg7_d     ; Input ; Info     ; Stuck at GND           ;
+; seg7_e     ; Input ; Info     ; Stuck at GND           ;
+; seg7_f     ; Input ; Info     ; Stuck at GND           ;
+; seg7_g     ; Input ; Info     ; Stuck at GND           ;
+; seg7_h     ; Input ; Info     ; Stuck at GND           ;
+; seg7_dot64 ; Input ; Info     ; Stuck at GND           ;
+; rk_a       ; Input ; Info     ; Stuck at GND           ;
+; rk_b       ; Input ; Info     ; Stuck at GND           ;
+; rk_c       ; Input ; Info     ; Stuck at GND           ;
+; rk_d       ; Input ; Info     ; Stuck at GND           ;
+; rk_e       ; Input ; Info     ; Stuck at GND           ;
+; rk_f       ; Input ; Info     ; Stuck at GND           ;
+; rk_g       ; Input ; Info     ; Stuck at GND           ;
++------------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 152                         ;
+; cycloneiii_ff         ; 34                          ;
+;     CLR               ; 18                          ;
+;     ENA CLR           ; 16                          ;
+; cycloneiii_lcell_comb ; 63                          ;
+;     arith             ; 17                          ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 3                           ;
+;     normal            ; 46                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 13                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -161,7 +332,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 11 17:03:44 2022
+    Info: Processing started: Thu May 12 16:09:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kadai3 -c kadai3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -171,15 +342,147 @@ Info (12021): Found 1 design units, including 1 entities, in source file /hw2019
     Info (12023): Found entity 1: kadai3 File: Z:/hw2019/verilog-src/public/kadai3.v Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/decode_7seg.v
     Info (12023): Found entity 1: decode_7seg File: Z:/hw2019/verilog-src/templates/decode_7seg.v Line: 15
-Error (10170): Verilog HDL syntax error at udcount4.v(31) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 31
-Error (10759): Verilog HDL error at udcount4.v(41): object q declared in a list of port declarations cannot be redeclared within the module body File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 41
-Error (10170): Verilog HDL syntax error at udcount4.v(46) near text: "end";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 46
-Error (10112): Ignored design unit "udcount4" at udcount4.v(19) due to previous errors File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 19
-Info (12021): Found 0 design units, including 0 entities, in source file /hw2019/verilog-src/templates/udcount4.v
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 1 warning
-    Error: Peak virtual memory: 4744 megabytes
-    Error: Processing ended: Wed May 11 17:03:58 2022
-    Error: Elapsed time: 00:00:14
-    Error: Total CPU time (on all processors): 00:00:32
+Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/udcount4.v
+    Info (12023): Found entity 1: udcount4 File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 19
+Info (12127): Elaborating entity "kadai3" for the top level hierarchy
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 117
+Info (12128): Elaborating entity "udcount4" for hierarchy "udcount4:udcount4_inst" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 127
+Warning (10230): Verilog HDL assignment warning at udcount4.v(43): truncated value with size 32 to match size of target (4) File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 43
+Warning (10230): Verilog HDL assignment warning at udcount4.v(50): truncated value with size 32 to match size of target (4) File: Z:/hw2019/verilog-src/templates/udcount4.v Line: 50
+Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode_7seg_inst" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 130
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: Z:/hw2019/verilog-src/public/led_driver.v Line: 200
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_x[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "seg_x[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 60
+    Warning (13410): Pin "led_out[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 64
+    Warning (13410): Pin "led_out[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 64
+    Warning (13410): Pin "led_out[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 64
+    Warning (13410): Pin "seg_a[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_a[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 65
+    Warning (13410): Pin "seg_b[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_b[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 66
+    Warning (13410): Pin "seg_c[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_c[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 67
+    Warning (13410): Pin "seg_d[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_d[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 68
+    Warning (13410): Pin "seg_e[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_e[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 69
+    Warning (13410): Pin "seg_f[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_f[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 70
+    Warning (13410): Pin "seg_g[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_g[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 71
+    Warning (13410): Pin "seg_h[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+    Warning (13410): Pin "seg_h[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai3.v Line: 72
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 42 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "psw_a0" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 36
+    Warning (15610): No output dependent on input pin "psw_a1" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 37
+    Warning (15610): No output dependent on input pin "psw_a2" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 38
+    Warning (15610): No output dependent on input pin "psw_a3" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 39
+    Warning (15610): No output dependent on input pin "psw_b0" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 41
+    Warning (15610): No output dependent on input pin "psw_b1" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 42
+    Warning (15610): No output dependent on input pin "psw_b2" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 43
+    Warning (15610): No output dependent on input pin "psw_b3" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 44
+    Warning (15610): No output dependent on input pin "psw_b4" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 45
+    Warning (15610): No output dependent on input pin "psw_c0" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 46
+    Warning (15610): No output dependent on input pin "psw_c1" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 47
+    Warning (15610): No output dependent on input pin "psw_c2" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 48
+    Warning (15610): No output dependent on input pin "psw_c3" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 49
+    Warning (15610): No output dependent on input pin "psw_c4" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 50
+    Warning (15610): No output dependent on input pin "psw_d0" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 51
+    Warning (15610): No output dependent on input pin "psw_d1" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 52
+    Warning (15610): No output dependent on input pin "psw_d2" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 53
+    Warning (15610): No output dependent on input pin "psw_d3" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 54
+    Warning (15610): No output dependent on input pin "psw_d4" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 55
+    Warning (15610): No output dependent on input pin "hex_a[1]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_a[2]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_a[3]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_b[0]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[1]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[2]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[3]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_a[0]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[1]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[2]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[3]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[4]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[5]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[6]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[7]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_b[0]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[1]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[2]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[3]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[4]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[5]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[6]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[7]" File: Z:/hw2019/verilog-src/public/kadai3.v Line: 59
+Info (21057): Implemented 220 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
+    Info: Peak virtual memory: 4810 megabytes
+    Info: Processing ended: Thu May 12 16:10:05 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:34
 
 
