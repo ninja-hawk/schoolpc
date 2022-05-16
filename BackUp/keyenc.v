@@ -17,59 +17,41 @@ module keyenc(input [15:0] keys,
 	      output 	   key_in,
 	      output [3:0] key_val);
 
-function inkey(input [15:0] keys);
+function [0:0] inner(input [15:0]input_keys);
+	begin
+	if (input_keys == 16'b0)
+	begin inner = 0;end	
+	else
+	begin inner = 1;end
+	end
+endfunction 
+
+function [3:0] encoder(input [15:0] in_keys);
   begin
-    casex (keys)
-      16'b0xxx_xxxx_xxxx_xxxx: encoder = 1;
-      16'bx0xx_xxxx_xxxx_xxxx: encoder = 1;
-      16'bxx0x_xxxx_xxxx_xxxx: encoder = 1;
-      16'bxxx0_xxxx_xxxx_xxxx: encoder = 1;
-      16'bxxxx_0xxx_xxxx_xxxx: encoder = 1;
-      16'bxxxx_x0xx_xxxx_xxxx: encoder = 1;
-      16'bxxxx_xx0x_xxxx_xxxx: encoder = 1;
-      16'bxxxx_xxx0_xxxx_xxxx: encoder = 1;
-      16'bxxxx_xxxx_0xxx_xxxx: encoder = 1;
-      16'bxxxx_xxxx_x0xx_xxxx: encoder = 1;
-      16'bxxxx_xxxx_xx0x_xxxx: encoder = 1;
-      16'bxxxx_xxxx_xxx0_xxxx: encoder = 1;
-      16'bxxxx_xxxx_xxxx_0xxx: encoder = 1;
-      16'bxxxx_xxxx_xxxx_x0xx: encoder = 1;
-      16'bxxxx_xxxx_xxxx_xx0x: encoder = 1;
-      16'bxxxx_xxxx_xxxx_xxx0: encoder = 1;
-      default: encoder = 0;
+    casex (in_keys)
+		16'bxxxx_xxxx_xxxx_xxx1: encoder = 4'b0000;
+      16'bxxxx_xxxx_xxxx_xx1x: encoder = 4'b0001;
+      16'bxxxx_xxxx_xxxx_x1xx: encoder = 4'b0010;
+      16'bxxxx_xxxx_xxxx_1xxx: encoder = 4'b0011;
+      16'bxxxx_xxxx_xxx1_xxxx: encoder = 4'b0100;
+      16'bxxxx_xxxx_xx1x_xxxx: encoder = 4'b0101;
+      16'bxxxx_xxxx_x1xx_xxxx: encoder = 4'b0110;
+      16'bxxxx_xxxx_1xxx_xxxx: encoder = 4'b0111;
+      16'bxxxx_xxx1_xxxx_xxxx: encoder = 4'b1000;
+      16'bxxxx_xx1x_xxxx_xxxx: encoder = 4'b1001;
+      16'bxxxx_x1xx_xxxx_xxxx: encoder = 4'b1010;
+      16'bxxxx_1xxx_xxxx_xxxx: encoder = 4'b1011;
+      16'bxxx1_xxxx_xxxx_xxxx: encoder = 4'b1100;
+      16'bxx1x_xxxx_xxxx_xxxx: encoder = 4'b1101;
+      16'bx1xx_xxxx_xxxx_xxxx: encoder = 4'b1110;
+      16'b1xxx_xxxx_xxxx_xxxx: encoder = 4'b1111;
+      default: encoder = 4'b0;
     endcase
   end
 endfunction
+assign key_in = inner(keys);
+assign key_val = encoder(keys);
 
-
-function [3:0] encoder(input [15:0] keys);
-  begin
-    casex (keys)
-      16'b0xxx_xxxx_xxxx_xxxx: encoder = 4'b0000;
-      16'bx0xx_xxxx_xxxx_xxxx: encoder = 4'b0001;
-      16'bxx0x_xxxx_xxxx_xxxx: encoder = 4'b0010;
-      16'bxxx0_xxxx_xxxx_xxxx: encoder = 4'b0011;
-      16'bxxxx_0xxx_xxxx_xxxx: encoder = 4'b0100;
-      16'bxxxx_x0xx_xxxx_xxxx: encoder = 4'b0001;
-      16'bxxxx_xx0x_xxxx_xxxx: encoder = 4'b0110;
-      16'bxxxx_xxx0_xxxx_xxxx: encoder = 4'b0111;
-      16'bxxxx_xxxx_0xxx_xxxx: encoder = 4'b1000;
-      16'bxxxx_xxxx_x0xx_xxxx: encoder = 4'b1001;
-      16'bxxxx_xxxx_xx0x_xxxx: encoder = 4'b1010;
-      16'bxxxx_xxxx_xxx0_xxxx: encoder = 4'b1011;
-      16'bxxxx_xxxx_xxxx_0xxx: encoder = 4'b1100;
-      16'bxxxx_xxxx_xxxx_x0xx: encoder = 4'b1101;
-      16'bxxxx_xxxx_xxxx_xx0x: encoder = 4'b1110;
-      16'bxxxx_xxxx_xxxx_xxx0: encoder = 4'b1111;
-      default: encoder = 4'bx;
-    endcase
-  end
-endfunction
-
-always @(posedge inkey(keys))
-begin
-  key_val <= encoder(keys);
-end
 
 
 endmodule // keyenc

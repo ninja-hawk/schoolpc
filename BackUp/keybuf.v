@@ -21,6 +21,22 @@ module keybuf(input         clock,
 	      input 	    key_in,
 	      input [3:0]   key_val,
 	      input 	    clear,
-	      output [31:0] out);
+	      output [31:0] out);			
 
+reg [31:0] a;
+
+always @(posedge clock or negedge reset)
+	begin
+		if(!reset)
+			begin a = 32'h0; end
+		else if(clear)
+			begin a <= 32'h0 ; end
+		else if(key_in)
+			begin
+			a <= (a << 4) + key_val;
+			end
+
+	end
+
+assign out = a;
 endmodule // keyenc
