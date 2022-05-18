@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon May 16 15:33:00 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : kadai4
+Top-level Entity Name : kadai4
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 222 / 28,848 ( < 1 % )
+    Total combinational functions : 210 / 28,848 ( < 1 % )
+    Dedicated logic registers : 112 / 28,848 ( < 1 % )
+Total registers : 112
+Total pins : 152 / 329 ( 46 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
