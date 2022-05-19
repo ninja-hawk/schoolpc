@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kadai5
-Wed May 18 17:03:44 2022
+Thu May 19 17:00:24 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed May 18 17:03:44 2022           ;
+; Analysis & Synthesis Status        ; Failed - Thu May 19 17:00:24 2022           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; kadai5                                      ;
 ; Top-level Entity Name              ; kadai5                                      ;
@@ -162,7 +162,7 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 18 17:03:29 2022
+    Info: Processing started: Thu May 19 17:00:10 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kadai5 -c kadai5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -174,22 +174,47 @@ Info (12021): Found 1 design units, including 1 entities, in source file /hw2019
     Info (12023): Found entity 1: keyenc File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/keybuf.v
     Info (12023): Found entity 1: keybuf File: Z:/hw2019/verilog-src/templates/keybuf.v Line: 19
-Error (10170): Verilog HDL syntax error at calc.v(66) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/calc.v Line: 66
-Error (10170): Verilog HDL syntax error at calc.v(66) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/calc.v Line: 66
-Error (10170): Verilog HDL syntax error at calc.v(73) near text: "(";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/calc.v Line: 73
-Error (10170): Verilog HDL syntax error at calc.v(73) near text: ")";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: Z:/hw2019/verilog-src/templates/calc.v Line: 73
-Error (10112): Ignored design unit "calc" at calc.v(38) due to previous errors File: Z:/hw2019/verilog-src/templates/calc.v Line: 38
-Info (12021): Found 0 design units, including 0 entities, in source file /hw2019/verilog-src/templates/calc.v
+Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/calc.v
+    Info (12023): Found entity 1: calc File: Z:/hw2019/verilog-src/templates/calc.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/led_driver.v
     Info (12023): Found entity 1: led_driver File: Z:/hw2019/verilog-src/public/led_driver.v Line: 68
 Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/kadai5.v
     Info (12023): Found entity 1: kadai5 File: Z:/hw2019/verilog-src/public/kadai5.v Line: 33
+Info (12127): Elaborating entity "kadai5" for the top level hierarchy
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 117
+Info (12128): Elaborating entity "syncro" for hierarchy "syncro:syncro_a0" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 141
+Info (12128): Elaborating entity "calc" for hierarchy "calc:calc_inst" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 173
+Warning (10036): Verilog HDL or VHDL warning at calc.v(52): object "equal_reg" assigned a value but never read File: Z:/hw2019/verilog-src/templates/calc.v Line: 52
+Warning (10776): Verilog HDL warning at calc.v(37): variable tf in static task or function tf may have unintended latch behavior File: Z:/hw2019/verilog-src/templates/calc.v Line: 37
+Warning (10241): Verilog HDL Function Declaration warning at calc.v(37): function "tf" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function File: Z:/hw2019/verilog-src/templates/calc.v Line: 37
+Critical Warning (10237): Verilog HDL warning at calc.v(57): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead File: Z:/hw2019/verilog-src/templates/calc.v Line: 57
+Warning (10030): Net "tf" at calc.v(37) has no driver or initial value, using a default initial value '0' File: Z:/hw2019/verilog-src/templates/calc.v Line: 37
+Error (10818): Can't infer register for "ibuf[0]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[1]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[2]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[3]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[4]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[5]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[6]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[7]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[8]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[9]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[10]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[11]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[12]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[13]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[14]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[15]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[16]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[17]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (10818): Can't infer register for "ibuf[18]" at calc.v(60) because it does not hold its value outside the clock edge File: Z:/hw2019/verilog-src/templates/calc.v Line: 60
+Error (12152): Can't elaborate user hierarchy "calc:calc_inst" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 173
 Info (144001): Generated suppressed messages file Z:/schoolpc/Hardware5/output_files/kadai5.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 5 errors, 1 warning
-    Error: Peak virtual memory: 4744 megabytes
-    Error: Processing ended: Wed May 18 17:03:45 2022
-    Error: Elapsed time: 00:00:16
-    Error: Total CPU time (on all processors): 00:00:33
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 20 errors, 6 warnings
+    Error: Peak virtual memory: 4746 megabytes
+    Error: Processing ended: Thu May 19 17:00:24 2022
+    Error: Elapsed time: 00:00:14
+    Error: Total CPU time (on all processors): 00:00:32
 
 
 +------------------------------------------+
