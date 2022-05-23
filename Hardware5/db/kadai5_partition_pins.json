@@ -356,11 +356,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "sys_clock",
+					"strict" : false
+				},
+				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "sys_clock",
+					"name" : "psw_b4",
+					"strict" : false
+				},
+				{
+					"name" : "psw_d4",
 					"strict" : false
 				},
 				{
@@ -368,15 +376,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "psw_d2",
+					"name" : "psw_a3",
 					"strict" : false
 				},
 				{
-					"name" : "psw_d1",
+					"name" : "psw_a2",
 					"strict" : false
 				},
 				{
-					"name" : "psw_d0",
+					"name" : "psw_a1",
+					"strict" : false
+				},
+				{
+					"name" : "psw_a0",
 					"strict" : false
 				},
 				{
@@ -392,15 +404,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "psw_a3",
-					"strict" : false
-				},
-				{
-					"name" : "psw_a2",
-					"strict" : false
-				},
-				{
 					"name" : "psw_c0",
+					"strict" : false
+				},
+				{
+					"name" : "psw_c2",
 					"strict" : false
 				},
 				{
@@ -412,31 +420,23 @@
 					"strict" : false
 				},
 				{
-					"name" : "psw_a1",
-					"strict" : false
-				},
-				{
-					"name" : "psw_a0",
-					"strict" : false
-				},
-				{
 					"name" : "psw_b3",
 					"strict" : false
 				},
 				{
-					"name" : "psw_c2",
+					"name" : "psw_d2",
+					"strict" : false
+				},
+				{
+					"name" : "psw_d1",
+					"strict" : false
+				},
+				{
+					"name" : "psw_d0",
 					"strict" : false
 				},
 				{
 					"name" : "psw_d3",
-					"strict" : false
-				},
-				{
-					"name" : "psw_d4",
-					"strict" : false
-				},
-				{
-					"name" : "psw_b4",
 					"strict" : false
 				}
 			]

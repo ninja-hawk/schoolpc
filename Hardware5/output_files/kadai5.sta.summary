@@ -3,75 +3,75 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 100C Model Setup 'clock'
-Slack : -3.789
-TNS   : -228.658
+Slack : -4.113
+TNS   : -272.868
 
 Type  : Slow 1200mV 100C Model Setup 'sys_clock'
-Slack : -2.502
-TNS   : -48.494
+Slack : -2.136
+TNS   : -45.128
 
 Type  : Slow 1200mV 100C Model Hold 'sys_clock'
 Slack : 0.419
 TNS   : 0.000
 
 Type  : Slow 1200mV 100C Model Hold 'clock'
-Slack : 0.423
+Slack : 0.438
 TNS   : 0.000
 
 Type  : Slow 1200mV 100C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -158.485
+TNS   : -199.605
 
 Type  : Slow 1200mV 100C Model Minimum Pulse Width 'sys_clock'
 Slack : -3.000
 TNS   : -40.265
 
 Type  : Slow 1200mV -40C Model Setup 'clock'
-Slack : -3.182
-TNS   : -188.818
+Slack : -3.543
+TNS   : -224.616
 
 Type  : Slow 1200mV -40C Model Setup 'sys_clock'
-Slack : -2.092
-TNS   : -38.778
+Slack : -1.764
+TNS   : -35.652
 
 Type  : Slow 1200mV -40C Model Hold 'sys_clock'
-Slack : 0.356
+Slack : 0.357
 TNS   : 0.000
 
 Type  : Slow 1200mV -40C Model Hold 'clock'
-Slack : 0.381
+Slack : 0.395
 TNS   : 0.000
 
 Type  : Slow 1200mV -40C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -158.485
+TNS   : -199.605
 
 Type  : Slow 1200mV -40C Model Minimum Pulse Width 'sys_clock'
 Slack : -3.000
 TNS   : -40.265
 
 Type  : Fast 1200mV -40C Model Setup 'clock'
-Slack : -1.203
-TNS   : -64.197
+Slack : -1.366
+TNS   : -69.238
 
 Type  : Fast 1200mV -40C Model Setup 'sys_clock'
-Slack : -0.573
-TNS   : -7.342
-
-Type  : Fast 1200mV -40C Model Hold 'clock'
-Slack : 0.177
-TNS   : 0.000
+Slack : -0.427
+TNS   : -5.979
 
 Type  : Fast 1200mV -40C Model Hold 'sys_clock'
 Slack : 0.182
 TNS   : 0.000
 
+Type  : Fast 1200mV -40C Model Hold 'clock'
+Slack : 0.184
+TNS   : 0.000
+
 Type  : Fast 1200mV -40C Model Minimum Pulse Width 'clock'
 Slack : -3.000
-TNS   : -130.553
+TNS   : -164.798
 
 Type  : Fast 1200mV -40C Model Minimum Pulse Width 'sys_clock'
 Slack : -3.000
-TNS   : -33.554
+TNS   : -33.694
 
 ------------------------------------------------------------
