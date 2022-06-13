@@ -1,0 +1,824 @@
+Analysis & Synthesis report for kappa3_light
+Thu Jun 09 16:12:23 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated
+ 14. Parameter Settings for User Entity Instance: kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: debugger:dbg_inst
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "debugger:dbg_inst"
+ 18. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:creg_inst"
+ 19. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:breg_inst"
+ 20. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:areg_inst"
+ 21. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|regfile:regfile_inst"
+ 22. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|memory:mem_inst"
+ 23. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:ir_inst"
+ 24. Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:pc_inst"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Jun 09 16:12:23 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; kappa3_light                                ;
+; Top-level Entity Name              ; kappa3_light                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 3,397                                       ;
+;     Total combinational functions  ; 2,193                                       ;
+;     Dedicated logic registers      ; 1,315                                       ;
+; Total registers                    ; 1315                                        ;
+; Total pins                         ; 152                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 524,288                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE30F23I7       ;                    ;
+; Top-level entity name                                            ; kappa3_light       ; kappa3_light       ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                ;
++--------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                       ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
++--------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+; ../../hw2019/verilog-src/templates/decode_7seg.v       ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v       ;         ;
+; ../../hw2019/verilog-src/templates/keyenc.v            ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v            ;         ;
+; ../../hw2019/verilog-src/templates/keybuf.v            ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keybuf.v            ;         ;
+; ../../hw2019/verilog-src/public/syncro.v               ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v               ;         ;
+; ../../hw2019/verilog-src/public/regfile.v              ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/regfile.v              ;         ;
+; ../../hw2019/verilog-src/public/reg32.v                ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/reg32.v                ;         ;
+; ../../hw2019/verilog-src/public/memory.v               ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/memory.v               ;         ;
+; ../../hw2019/verilog-src/public/mem64kd.v              ; yes             ; User Wizard-Generated File   ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/mem64kd.v              ;         ;
+; ../../hw2019/verilog-src/public/led_driver.v           ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v           ;         ;
+; ../../hw2019/verilog-src/public/kappa3_light_core_dp.v ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v ;         ;
+; ../../hw2019/verilog-src/public/debugger.v             ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/debugger.v             ;         ;
+; ../../hw2019/verilog-src/public/kappa3_light.v         ; yes             ; User Verilog HDL File        ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v         ;         ;
+; altsyncram.tdf                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf             ;         ;
+; stratix_ram_block.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc      ;         ;
+; lpm_mux.inc                                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                ;         ;
+; lpm_decode.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc             ;         ;
+; aglobal181.inc                                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc             ;         ;
+; a_rdenreg.inc                                          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc              ;         ;
+; altrom.inc                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                 ;         ;
+; altram.inc                                             ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                 ;         ;
+; altdpram.inc                                           ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc               ;         ;
+; db/altsyncram_p0k2.tdf                                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/altsyncram_p0k2.tdf ;         ;
+; db/decode_jsa.tdf                                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/decode_jsa.tdf      ;         ;
+; db/decode_c8a.tdf                                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/decode_c8a.tdf      ;         ;
+; db/mux_gob.tdf                                         ; yes             ; Auto-Generated Megafunction  ; C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/mux_gob.tdf         ;         ;
++--------------------------------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 3,397       ;
+;                                             ;             ;
+; Total combinational functions               ; 2193        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 1901        ;
+;     -- 3 input functions                    ; 196         ;
+;     -- <=2 input functions                  ; 96          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 2128        ;
+;     -- arithmetic mode                      ; 65          ;
+;                                             ;             ;
+; Total registers                             ; 1315        ;
+;     -- Dedicated logic registers            ; 1315        ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 152         ;
+; Total memory bits                           ; 524288      ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 1313        ;
+; Total fan-out                               ; 14977       ;
+; Average fan-out                             ; 3.86        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                            ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                            ; Entity Name       ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+; |kappa3_light                                   ; 2193 (2)            ; 1315 (1)                  ; 524288      ; 0            ; 0       ; 0         ; 152  ; 0            ; |kappa3_light                                                                                                                                                  ; kappa3_light      ; work         ;
+;    |debugger:dbg_inst|                          ; 1576 (1576)         ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|debugger:dbg_inst                                                                                                                                ; debugger          ; work         ;
+;    |decode_7seg:decode_7seg_inst0|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst0                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst1|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst1                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst2|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst2                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst3|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst3                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst4|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst4                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst5|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst5                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst6|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst6                                                                                                                    ; decode_7seg       ; work         ;
+;    |decode_7seg:decode_7seg_inst7|              ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|decode_7seg:decode_7seg_inst7                                                                                                                    ; decode_7seg       ; work         ;
+;    |kappa3_light_core:kapp3_light_core|         ; 51 (0)              ; 1153 (0)                  ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core                                                                                                               ; kappa3_light_core ; work         ;
+;       |memory:mem_inst|                         ; 8 (6)               ; 1 (0)                     ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|memory:mem_inst                                                                                               ; memory            ; work         ;
+;          |mem64kd:mem|                          ; 2 (0)               ; 1 (0)                     ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem                                                                                   ; mem64kd           ; work         ;
+;             |altsyncram:altsyncram_component|   ; 2 (0)               ; 1 (0)                     ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component                                                   ; altsyncram        ; work         ;
+;                |altsyncram_p0k2:auto_generated| ; 2 (0)               ; 1 (1)                     ; 524288      ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated                    ; altsyncram_p0k2   ; work         ;
+;                   |decode_jsa:decode3|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated|decode_jsa:decode3 ; decode_jsa        ; work         ;
+;       |reg32:areg_inst|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|reg32:areg_inst                                                                                               ; reg32             ; work         ;
+;       |reg32:breg_inst|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|reg32:breg_inst                                                                                               ; reg32             ; work         ;
+;       |reg32:creg_inst|                         ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|reg32:creg_inst                                                                                               ; reg32             ; work         ;
+;       |reg32:ir_inst|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|reg32:ir_inst                                                                                                 ; reg32             ; work         ;
+;       |reg32:pc_inst|                           ; 0 (0)               ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|reg32:pc_inst                                                                                                 ; reg32             ; work         ;
+;       |regfile:regfile_inst|                    ; 43 (43)             ; 992 (992)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|kappa3_light_core:kapp3_light_core|regfile:regfile_inst                                                                                          ; regfile           ; work         ;
+;    |keybuf:keybuf_inst|                         ; 41 (41)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|keybuf:keybuf_inst                                                                                                                               ; keybuf            ; work         ;
+;    |keyenc:keyenc_inst|                         ; 23 (23)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|keyenc:keyenc_inst                                                                                                                               ; keyenc            ; work         ;
+;    |led_driver:led_driver_inst|                 ; 415 (415)           ; 27 (27)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|led_driver:led_driver_inst                                                                                                                       ; led_driver        ; work         ;
+;    |syncro:syncro_a0|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_a0                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_a1|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_a1                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_a2|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_a2                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_a3|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_a3                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_a4|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_a4                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_b0|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_b0                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_b1|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_b1                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_b2|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_b2                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_b3|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_b3                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_b4|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_b4                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_c0|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_c0                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_c1|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_c1                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_c2|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_c2                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_c3|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_c3                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_c4|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_c4                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_d0|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_d0                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_d1|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_d1                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_d2|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_d2                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_d3|                           ; 2 (2)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_d3                                                                                                                                 ; syncro            ; work         ;
+;    |syncro:syncro_d4|                           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |kappa3_light|syncro:syncro_d4                                                                                                                                 ; syncro            ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                             ;
++------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                                                     ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
+; kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 16384        ; 32           ; 16384        ; 32           ; 524288 ; None ;
++------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+------+
+
+
++--------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                         ;
++----------------------------------------+---------------------------------------------------+
+; Register name                          ; Reason for Removal                                ;
++----------------------------------------+---------------------------------------------------+
+; led_driver:led_driver_inst|count[0]    ; Merged with debugger:dbg_inst|seg7_blink_count[0] ;
+; led_driver:led_driver_inst|count[1]    ; Merged with debugger:dbg_inst|seg7_blink_count[1] ;
+; debugger:dbg_inst|seg7_blink_count[2]  ; Merged with led_driver:led_driver_inst|count[2]   ;
+; debugger:dbg_inst|seg7_blink_count[3]  ; Merged with led_driver:led_driver_inst|count[3]   ;
+; debugger:dbg_inst|seg7_blink_count[4]  ; Merged with led_driver:led_driver_inst|count[4]   ;
+; debugger:dbg_inst|seg7_blink_count[5]  ; Merged with led_driver:led_driver_inst|count[5]   ;
+; debugger:dbg_inst|seg7_blink_count[6]  ; Merged with led_driver:led_driver_inst|count[6]   ;
+; debugger:dbg_inst|seg7_blink_count[7]  ; Merged with led_driver:led_driver_inst|count[7]   ;
+; debugger:dbg_inst|seg7_blink_count[8]  ; Merged with led_driver:led_driver_inst|count[8]   ;
+; debugger:dbg_inst|seg7_blink_count[9]  ; Merged with led_driver:led_driver_inst|count[9]   ;
+; debugger:dbg_inst|seg7_blink_count[10] ; Merged with led_driver:led_driver_inst|count[10]  ;
+; debugger:dbg_inst|seg7_blink_count[11] ; Merged with led_driver:led_driver_inst|count[11]  ;
+; debugger:dbg_inst|seg7_blink_count[12] ; Merged with led_driver:led_driver_inst|count[12]  ;
+; debugger:dbg_inst|seg7_blink_count[13] ; Merged with led_driver:led_driver_inst|count[13]  ;
+; debugger:dbg_inst|seg7_blink_count[14] ; Merged with led_driver:led_driver_inst|count[14]  ;
+; debugger:dbg_inst|seg7_blink_count[15] ; Merged with led_driver:led_driver_inst|count[15]  ;
+; Total Number of Removed Registers = 16 ;                                                   ;
++----------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1315  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 30    ;
+; Number of registers using Asynchronous Clear ; 1313  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1229  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; led_driver:led_driver_inst|rk_state[0]   ; 6       ;
+; led_driver:led_driver_inst|seg7_state[0] ; 49      ;
+; Total number of inverted registers = 2   ;         ;
++------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 30 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |kappa3_light|debugger:dbg_inst|mar[3]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |kappa3_light|keybuf:keybuf_inst|a[10]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |kappa3_light|debugger:dbg_inst|b_func            ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_x[1] ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; No         ; |kappa3_light|debugger:dbg_inst|b_func            ;
+; 9:1                ; 33 bits   ; 198 LEs       ; 132 LEs              ; 66 LEs                 ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_c[1] ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_e[3] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_h[3] ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_f[2] ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 30 LEs               ; 6 LEs                  ; No         ; |kappa3_light|led_driver:led_driver_inst|seg_g[4] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                     ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                      ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component ;
++------------------------------------+------------------------+-------------------------------------------------------------------------------+
+; Parameter Name                     ; Value                  ; Type                                                                          ;
++------------------------------------+------------------------+-------------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                                                                       ;
+; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                                                                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY                                                                  ;
+; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                                                                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                                                                ;
+; WIDTH_BYTEENA                      ; 1                      ; Untyped                                                                       ;
+; OPERATION_MODE                     ; BIDIR_DUAL_PORT        ; Untyped                                                                       ;
+; WIDTH_A                            ; 32                     ; Signed Integer                                                                ;
+; WIDTHAD_A                          ; 14                     ; Signed Integer                                                                ;
+; NUMWORDS_A                         ; 16384                  ; Signed Integer                                                                ;
+; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                                                                       ;
+; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                                                                       ;
+; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                                                                       ;
+; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                                                                       ;
+; INDATA_ACLR_A                      ; NONE                   ; Untyped                                                                       ;
+; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                                                                       ;
+; WIDTH_B                            ; 32                     ; Signed Integer                                                                ;
+; WIDTHAD_B                          ; 14                     ; Signed Integer                                                                ;
+; NUMWORDS_B                         ; 16384                  ; Signed Integer                                                                ;
+; INDATA_REG_B                       ; CLOCK0                 ; Untyped                                                                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0                 ; Untyped                                                                       ;
+; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                                                                       ;
+; ADDRESS_REG_B                      ; CLOCK0                 ; Untyped                                                                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                                                                       ;
+; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                                                                       ;
+; INDATA_ACLR_B                      ; NONE                   ; Untyped                                                                       ;
+; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                                                                       ;
+; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                                                                       ;
+; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                                                                       ;
+; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                                                                       ;
+; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                                                                       ;
+; WIDTH_BYTEENA_A                    ; 4                      ; Signed Integer                                                                ;
+; WIDTH_BYTEENA_B                    ; 1                      ; Signed Integer                                                                ;
+; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                                                                       ;
+; BYTE_SIZE                          ; 8                      ; Signed Integer                                                                ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                                                                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_WITH_NBE_READ ; Untyped                                                                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                                                                       ;
+; INIT_FILE                          ; UNUSED                 ; Untyped                                                                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                                                                       ;
+; MAXIMUM_DEPTH                      ; 0                      ; Untyped                                                                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                                                                       ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS                 ; Untyped                                                                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                                                                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS                 ; Untyped                                                                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                                                                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                                                                       ;
+; ENABLE_ECC                         ; FALSE                  ; Untyped                                                                       ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                                                                       ;
+; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                                                                       ;
+; DEVICE_FAMILY                      ; Cyclone IV E           ; Untyped                                                                       ;
+; CBXI_PARAMETER                     ; altsyncram_p0k2        ; Untyped                                                                       ;
++------------------------------------+------------------------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debugger:dbg_inst                                      ;
++----------------+------------------------------------------------------------------+-----------------+
+; Parameter Name ; Value                                                            ; Type            ;
++----------------+------------------------------------------------------------------+-----------------+
+; PAT_P          ; 11001110                                                         ; Unsigned Binary ;
+; PAT_C          ; 00011010                                                         ; Unsigned Binary ;
+; PAT_I          ; 01100000                                                         ; Unsigned Binary ;
+; PAT_R          ; 00001010                                                         ; Unsigned Binary ;
+; PAT_A          ; 11111010                                                         ; Unsigned Binary ;
+; PAT_B          ; 00111110                                                         ; Unsigned Binary ;
+; PAT_N          ; 00101010                                                         ; Unsigned Binary ;
+; PAT_D          ; 01111010                                                         ; Unsigned Binary ;
+; PAT_0          ; 11111100                                                         ; Unsigned Binary ;
+; PAT_1          ; 01100000                                                         ; Unsigned Binary ;
+; PAT_2          ; 11011010                                                         ; Unsigned Binary ;
+; PAT_3          ; 11110010                                                         ; Unsigned Binary ;
+; PAT_4          ; 01100110                                                         ; Unsigned Binary ;
+; PAT_5          ; 10110110                                                         ; Unsigned Binary ;
+; PAT_6          ; 10111110                                                         ; Unsigned Binary ;
+; PAT_7          ; 11100000                                                         ; Unsigned Binary ;
+; PAT_8          ; 11111110                                                         ; Unsigned Binary ;
+; PAT_9          ; 11100110                                                         ; Unsigned Binary ;
+; PAT_PC         ; 0000000000000000000000000000000011001110000110100000000000000000 ; Unsigned Binary ;
+; PAT_IR         ; 0000000000000000000000000000000001100000000010100000000000000000 ; Unsigned Binary ;
+; PAT_AREG       ; 0000000000000000000000000000000011111010000000000000000000000000 ; Unsigned Binary ;
+; PAT_BREG       ; 0000000000000000000000000000000000111110000000000000000000000000 ; Unsigned Binary ;
+; PAT_CREG       ; 0000000000000000000000000000000000011010000000000000000000000000 ; Unsigned Binary ;
+; PAT_MAR        ; 0000000000000000000000000000000000101010001010101111101000001010 ; Unsigned Binary ;
+; PAT_MEM        ; 0000000000000000000000000000000000101010001010100111101000001010 ; Unsigned Binary ;
+; PAT_R00        ; 0000000000000000000000000000000000001010111111001111110000000000 ; Unsigned Binary ;
+; PAT_R01        ; 0000000000000000000000000000000000001010111111000110000000000000 ; Unsigned Binary ;
+; PAT_R02        ; 0000000000000000000000000000000000001010111111001101101000000000 ; Unsigned Binary ;
+; PAT_R03        ; 0000000000000000000000000000000000001010111111001111001000000000 ; Unsigned Binary ;
+; PAT_R04        ; 0000000000000000000000000000000000001010111111000110011000000000 ; Unsigned Binary ;
+; PAT_R05        ; 0000000000000000000000000000000000001010111111001011011000000000 ; Unsigned Binary ;
+; PAT_R06        ; 0000000000000000000000000000000000001010111111001011111000000000 ; Unsigned Binary ;
+; PAT_R07        ; 0000000000000000000000000000000000001010111111001110000000000000 ; Unsigned Binary ;
+; PAT_R08        ; 0000000000000000000000000000000000001010111111001111111000000000 ; Unsigned Binary ;
+; PAT_R09        ; 0000000000000000000000000000000000001010111111001110011000000000 ; Unsigned Binary ;
+; PAT_R10        ; 0000000000000000000000000000000000001010011000001111110000000000 ; Unsigned Binary ;
+; PAT_R11        ; 0000000000000000000000000000000000001010011000000110000000000000 ; Unsigned Binary ;
+; PAT_R12        ; 0000000000000000000000000000000000001010011000001101101000000000 ; Unsigned Binary ;
+; PAT_R13        ; 0000000000000000000000000000000000001010011000001111001000000000 ; Unsigned Binary ;
+; PAT_R14        ; 0000000000000000000000000000000000001010011000000110011000000000 ; Unsigned Binary ;
+; PAT_R15        ; 0000000000000000000000000000000000001010011000001011011000000000 ; Unsigned Binary ;
+; PAT_R16        ; 0000000000000000000000000000000000001010011000001011111000000000 ; Unsigned Binary ;
+; PAT_R17        ; 0000000000000000000000000000000000001010011000001110000000000000 ; Unsigned Binary ;
+; PAT_R18        ; 0000000000000000000000000000000000001010011000001111111000000000 ; Unsigned Binary ;
+; PAT_R19        ; 0000000000000000000000000000000000001010011000001110011000000000 ; Unsigned Binary ;
+; PAT_R20        ; 0000000000000000000000000000000000001010110110101111110000000000 ; Unsigned Binary ;
+; PAT_R21        ; 0000000000000000000000000000000000001010110110100110000000000000 ; Unsigned Binary ;
+; PAT_R22        ; 0000000000000000000000000000000000001010110110101101101000000000 ; Unsigned Binary ;
+; PAT_R23        ; 0000000000000000000000000000000000001010110110101111001000000000 ; Unsigned Binary ;
+; PAT_R24        ; 0000000000000000000000000000000000001010110110100110011000000000 ; Unsigned Binary ;
+; PAT_R25        ; 0000000000000000000000000000000000001010110110101011011000000000 ; Unsigned Binary ;
+; PAT_R26        ; 0000000000000000000000000000000000001010110110101011111000000000 ; Unsigned Binary ;
+; PAT_R27        ; 0000000000000000000000000000000000001010110110101110000000000000 ; Unsigned Binary ;
+; PAT_R28        ; 0000000000000000000000000000000000001010110110101111111000000000 ; Unsigned Binary ;
+; PAT_R29        ; 0000000000000000000000000000000000001010110110101110011000000000 ; Unsigned Binary ;
+; PAT_R30        ; 0000000000000000000000000000000000001010111100101111110000000000 ; Unsigned Binary ;
+; PAT_R31        ; 0000000000000000000000000000000000001010111100100110000000000000 ; Unsigned Binary ;
++----------------+------------------------------------------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                           ;
++-------------------------------------------+------------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                          ;
++-------------------------------------------+------------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                              ;
+; Entity Instance                           ; kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                                                                ;
+;     -- WIDTH_A                            ; 32                                                                                             ;
+;     -- NUMWORDS_A                         ; 16384                                                                                          ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                   ;
+;     -- WIDTH_B                            ; 32                                                                                             ;
+;     -- NUMWORDS_B                         ; 16384                                                                                          ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                                         ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                                   ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                           ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                      ;
++-------------------------------------------+------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debugger:dbg_inst"                                                                                                                  ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                        ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+; mem_read  ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "mem_read[31..1]" have no fanouts  ;
+; mem_write ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (1 bits) it drives; bit(s) "mem_write[31..1]" have no fanouts ;
++-----------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:creg_inst" ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; in   ; Input ; Info     ; Stuck at GND                                         ;
+; ld   ; Input ; Info     ; Stuck at GND                                         ;
++------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:breg_inst" ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; ld   ; Input ; Info     ; Stuck at GND                                         ;
++------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:areg_inst" ;
++------+-------+----------+------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                              ;
++------+-------+----------+------------------------------------------------------+
+; ld   ; Input ; Info     ; Stuck at GND                                         ;
++------+-------+----------+------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|regfile:regfile_inst" ;
++----------+-------+----------+-------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                               ;
++----------+-------+----------+-------------------------------------------------------+
+; rs1_addr ; Input ; Info     ; Stuck at GND                                          ;
+; rs2_addr ; Input ; Info     ; Stuck at GND                                          ;
+; rd_addr  ; Input ; Info     ; Stuck at GND                                          ;
+; in       ; Input ; Info     ; Stuck at GND                                          ;
+; ld       ; Input ; Info     ; Stuck at GND                                          ;
++----------+-------+----------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|memory:mem_inst"                                    ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; address ; Input  ; Info     ; Stuck at GND                                                                        ;
+; read    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; write   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wrdata  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; wrbits  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rddata  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:ir_inst" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; in   ; Input ; Info     ; Stuck at GND                                       ;
+; ld   ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "kappa3_light_core:kapp3_light_core|reg32:pc_inst" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; in   ; Input ; Info     ; Stuck at GND                                       ;
+; ld   ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 152                         ;
+; cycloneiii_ff         ; 1315                        ;
+;     CLR               ; 84                          ;
+;     ENA CLR           ; 1199                        ;
+;     ENA CLR SLD       ; 30                          ;
+;     plain             ; 2                           ;
+; cycloneiii_lcell_comb ; 2196                        ;
+;     arith             ; 65                          ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 30                          ;
+;     normal            ; 2131                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 31                          ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 166                         ;
+;         4 data inputs ; 1901                        ;
+; cycloneiii_ram_block  ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 14.00                       ;
+; Average LUT depth     ; 8.94                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:16     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Jun 09 16:11:35 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kappa3_light -c kappa3_light
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/decode_7seg.v
+    Info (12023): Found entity 1: decode_7seg File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/keyenc.v
+    Info (12023): Found entity 1: keyenc File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/keybuf.v
+    Info (12023): Found entity 1: keybuf File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keybuf.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/syncro.v
+    Info (12023): Found entity 1: syncro File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/regfile.v
+    Info (12023): Found entity 1: regfile File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/regfile.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/reg32.v
+    Info (12023): Found entity 1: reg32 File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/reg32.v Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/memory.v
+    Info (12023): Found entity 1: memory File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/memory.v Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/mem64kd.v
+    Info (12023): Found entity 1: mem64kd File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/mem64kd.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/led_driver.v
+    Info (12023): Found entity 1: led_driver File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v
+    Info (12023): Found entity 1: kappa3_light_core File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/debugger.v
+    Info (12023): Found entity 1: debugger File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/debugger.v Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/kappa3_light.v
+    Info (12023): Found entity 1: kappa3_light File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 28
+Info (12127): Elaborating entity "kappa3_light" for the top level hierarchy
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 112
+Info (12128): Elaborating entity "syncro" for hierarchy "syncro:syncro_a0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 141
+Info (12128): Elaborating entity "keyenc" for hierarchy "keyenc:keyenc_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 170
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(33): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 33
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(34): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 34
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(35): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 35
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(36): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 36
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(37): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 37
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(38): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 38
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(39): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 39
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(40): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 40
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(41): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 41
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(42): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 42
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(43): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 43
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(44): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 44
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(45): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 45
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(46): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 46
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(47): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 47
+Info (12128): Elaborating entity "keybuf" for hierarchy "keybuf:keybuf_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 179
+Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode_7seg_inst0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 190
+Info (12128): Elaborating entity "kappa3_light_core" for hierarchy "kappa3_light_core:kapp3_light_core" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 260
+Info (12128): Elaborating entity "reg32" for hierarchy "kappa3_light_core:kapp3_light_core|reg32:pc_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v Line: 87
+Info (12128): Elaborating entity "memory" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v Line: 121
+Info (12128): Elaborating entity "mem64kd" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/memory.v Line: 52
+Info (12128): Elaborating entity "altsyncram" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/mem64kd.v Line: 100
+Info (12130): Elaborated megafunction instantiation "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/mem64kd.v Line: 100
+Info (12133): Instantiated megafunction "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/mem64kd.v Line: 100
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK0"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16384"
+    Info (12134): Parameter "numwords_b" = "16384"
+    Info (12134): Parameter "operation_mode" = "BIDIR_DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_WITH_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "14"
+    Info (12134): Parameter "widthad_b" = "14"
+    Info (12134): Parameter "width_a" = "32"
+    Info (12134): Parameter "width_b" = "32"
+    Info (12134): Parameter "width_byteena_a" = "4"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_p0k2.tdf
+    Info (12023): Found entity 1: altsyncram_p0k2 File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/altsyncram_p0k2.tdf Line: 33
+Info (12128): Elaborating entity "altsyncram_p0k2" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_jsa.tdf
+    Info (12023): Found entity 1: decode_jsa File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/decode_jsa.tdf Line: 22
+Info (12128): Elaborating entity "decode_jsa" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated|decode_jsa:decode2" File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/altsyncram_p0k2.tdf Line: 49
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8a.tdf
+    Info (12023): Found entity 1: decode_c8a File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/decode_c8a.tdf Line: 22
+Info (12128): Elaborating entity "decode_c8a" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated|decode_c8a:rden_decode_a" File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/altsyncram_p0k2.tdf Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_gob.tdf
+    Info (12023): Found entity 1: mux_gob File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/mux_gob.tdf Line: 22
+Info (12128): Elaborating entity "mux_gob" for hierarchy "kappa3_light_core:kapp3_light_core|memory:mem_inst|mem64kd:mem|altsyncram:altsyncram_component|altsyncram_p0k2:auto_generated|mux_gob:mux4" File: C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/db/altsyncram_p0k2.tdf Line: 53
+Info (12128): Elaborating entity "regfile" for hierarchy "kappa3_light_core:kapp3_light_core|regfile:regfile_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light_core_dp.v Line: 144
+Info (12128): Elaborating entity "debugger" for hierarchy "debugger:dbg_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 304
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "debugger:dbg_inst|Ram0" is uninferred due to asynchronous read logic File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/debugger.v Line: 332
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13000): Registers with preset signals will power-up high File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 200
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_x[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 55
+    Warning (13410): Pin "seg_y[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 57
+    Warning (13410): Pin "led_out[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "led_out[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 59
+    Warning (13410): Pin "seg_a[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 60
+    Warning (13410): Pin "seg_b[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 61
+    Warning (13410): Pin "seg_c[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 62
+    Warning (13410): Pin "seg_d[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 63
+    Warning (13410): Pin "seg_e[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 64
+    Warning (13410): Pin "seg_f[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 65
+    Warning (13410): Pin "seg_g[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 66
+    Warning (13410): Pin "seg_h[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 67
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/output_files/kappa3_light.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 15 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dip_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_a[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 53
+    Warning (15610): No output dependent on input pin "dip_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+    Warning (15610): No output dependent on input pin "dip_b[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kappa3_light.v Line: 54
+Info (21057): Implemented 3613 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 3397 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 52 warnings
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Thu Jun 09 16:12:23 2022
+    Info: Elapsed time: 00:00:48
+    Info: Total CPU time (on all processors): 00:01:19
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/saule/Documents/Quartus/schoolpc/HW2_kappa3_light/output_files/kappa3_light.map.smsg.
+
+

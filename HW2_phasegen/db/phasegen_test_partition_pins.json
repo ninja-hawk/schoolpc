@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sel_x[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_x[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_x[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_x[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sel_y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_out[7]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_a[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_b[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_c[1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sel[8]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "sys_clock",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "psw_b4",
+					"strict" : false
+				},
+				{
+					"name" : "psw_c4",
+					"strict" : false
+				},
+				{
+					"name" : "psw_d4",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

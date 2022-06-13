@@ -1,0 +1,488 @@
+Analysis & Synthesis report for phasegen_test
+Wed Jun 08 16:52:29 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "led_driver:led_driver_inst"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Jun 08 16:52:29 2022       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; phasegen_test                               ;
+; Top-level Entity Name              ; phasegen_test                               ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 75                                          ;
+;     Total combinational functions  ; 60                                          ;
+;     Dedicated logic registers      ; 45                                          ;
+; Total registers                    ; 45                                          ;
+; Total pins                         ; 152                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE30F23I7       ;                    ;
+; Top-level entity name                                            ; phasegen_test      ; phasegen_test      ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++-------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
++-------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+; ../../hw2019/verilog-src/public/syncro.v        ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v        ;         ;
+; ../../hw2019/verilog-src/public/led_driver.v    ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v    ;         ;
+; ../../hw2019/verilog-src/public/phasegen_test.v ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v ;         ;
+; ../../hw2019/verilog-src/templates/phasegen.v   ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/phasegen.v   ;         ;
++-------------------------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 75          ;
+;                                             ;             ;
+; Total combinational functions               ; 60          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 15          ;
+;     -- 3 input functions                    ; 18          ;
+;     -- <=2 input functions                  ; 27          ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 46          ;
+;     -- arithmetic mode                      ; 14          ;
+;                                             ;             ;
+; Total registers                             ; 45          ;
+;     -- Dedicated logic registers            ; 45          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 152         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; reset~input ;
+; Maximum fan-out                             ; 41          ;
+; Total fan-out                               ; 484         ;
+; Average fan-out                             ; 1.18        ;
++---------------------------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                   ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                       ; Entity Name   ; Library Name ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+; |phasegen_test                  ; 60 (0)              ; 45 (0)                    ; 0           ; 0            ; 0       ; 0         ; 152  ; 0            ; |phasegen_test                            ; phasegen_test ; work         ;
+;    |led_driver:led_driver_inst| ; 41 (41)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phasegen_test|led_driver:led_driver_inst ; led_driver    ; work         ;
+;    |phasegen:pg_inst|           ; 16 (16)             ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phasegen_test|phasegen:pg_inst           ; phasegen      ; work         ;
+;    |syncro:syncro_b4|           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phasegen_test|syncro:syncro_b4           ; syncro        ; work         ;
+;    |syncro:syncro_c4|           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phasegen_test|syncro:syncro_c4           ; syncro        ; work         ;
+;    |syncro:syncro_d4|           ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |phasegen_test|syncro:syncro_d4           ; syncro        ; work         ;
++---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 45    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 38    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 17    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------+
+; Inverted Register Statistics                       ;
++------------------------------------------+---------+
+; Inverted Register                        ; Fan out ;
++------------------------------------------+---------+
+; led_driver:led_driver_inst|rk_state[0]   ; 3       ;
+; led_driver:led_driver_inst|seg7_state[0] ; 3       ;
+; Total number of inverted registers = 2   ;         ;
++------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |phasegen_test|phasegen:pg_inst|cstate[0]          ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |phasegen_test|phasegen:pg_inst|state[0]           ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |phasegen_test|led_driver:led_driver_inst|seg_a[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "led_driver:led_driver_inst" ;
++----------------+-------+----------+--------------------+
+; Port           ; Type  ; Severity ; Details            ;
++----------------+-------+----------+--------------------+
+; seg7_a         ; Input ; Info     ; Stuck at GND       ;
+; seg7_b         ; Input ; Info     ; Stuck at GND       ;
+; seg7_c         ; Input ; Info     ; Stuck at GND       ;
+; seg7_d         ; Input ; Info     ; Stuck at GND       ;
+; seg7_e         ; Input ; Info     ; Stuck at GND       ;
+; seg7_f         ; Input ; Info     ; Stuck at GND       ;
+; seg7_g         ; Input ; Info     ; Stuck at GND       ;
+; seg7_h[63..58] ; Input ; Info     ; Stuck at GND       ;
+; seg7_h[56..50] ; Input ; Info     ; Stuck at GND       ;
+; seg7_h[48..42] ; Input ; Info     ; Stuck at GND       ;
+; seg7_h[40..34] ; Input ; Info     ; Stuck at GND       ;
+; seg7_h[32..0]  ; Input ; Info     ; Stuck at GND       ;
+; seg7_dot64     ; Input ; Info     ; Stuck at GND       ;
+; rk_a           ; Input ; Info     ; Stuck at GND       ;
+; rk_b           ; Input ; Info     ; Stuck at GND       ;
+; rk_c           ; Input ; Info     ; Stuck at GND       ;
+; rk_d           ; Input ; Info     ; Stuck at GND       ;
+; rk_e           ; Input ; Info     ; Stuck at GND       ;
+; rk_f           ; Input ; Info     ; Stuck at GND       ;
+; rk_g           ; Input ; Info     ; Stuck at GND       ;
+; rk_h           ; Input ; Info     ; Stuck at GND       ;
++----------------+-------+----------+--------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 152                         ;
+; cycloneiii_ff         ; 45                          ;
+;     CLR               ; 25                          ;
+;     ENA               ; 4                           ;
+;     ENA CLR           ; 13                          ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 65                          ;
+;     arith             ; 14                          ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 51                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 13                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 15                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.17                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Wed Jun 08 16:52:17 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off phasegen_test -c phasegen_test
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/syncro.v
+    Info (12023): Found entity 1: syncro File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/led_driver.v
+    Info (12023): Found entity 1: led_driver File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/phasegen_test.v
+    Info (12023): Found entity 1: phasegen_test File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/phasegen.v
+    Info (12023): Found entity 1: phasegen File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/phasegen.v Line: 30
+Info (12127): Elaborating entity "phasegen_test" for the top level hierarchy
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 115
+Info (12128): Elaborating entity "syncro" for hierarchy "syncro:syncro_b4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 121
+Info (12128): Elaborating entity "phasegen" for hierarchy "phasegen:pg_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 143
+Warning (10199): Verilog HDL Case Statement warning at phasegen.v(74): case item expression never matches the case expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/phasegen.v Line: 74
+Warning (10199): Verilog HDL Case Statement warning at phasegen.v(83): case item expression never matches the case expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/phasegen.v Line: 83
+Info (13000): Registers with preset signals will power-up high File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 200
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_x[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_x[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 58
+    Warning (13410): Pin "seg_y[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "seg_y[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 60
+    Warning (13410): Pin "led_out[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 62
+    Warning (13410): Pin "seg_a[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_a[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 63
+    Warning (13410): Pin "seg_b[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_b[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 64
+    Warning (13410): Pin "seg_c[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_c[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 65
+    Warning (13410): Pin "seg_d[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_d[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 66
+    Warning (13410): Pin "seg_e[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_e[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 67
+    Warning (13410): Pin "seg_f[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_f[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 68
+    Warning (13410): Pin "seg_g[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_g[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 69
+    Warning (13410): Pin "seg_h[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+    Warning (13410): Pin "seg_h[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 70
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 41 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "psw_a0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 34
+    Warning (15610): No output dependent on input pin "psw_a1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 35
+    Warning (15610): No output dependent on input pin "psw_a2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 36
+    Warning (15610): No output dependent on input pin "psw_a3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 37
+    Warning (15610): No output dependent on input pin "psw_a4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 38
+    Warning (15610): No output dependent on input pin "psw_b0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 39
+    Warning (15610): No output dependent on input pin "psw_b1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 40
+    Warning (15610): No output dependent on input pin "psw_b2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 41
+    Warning (15610): No output dependent on input pin "psw_b3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 42
+    Warning (15610): No output dependent on input pin "psw_c0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 44
+    Warning (15610): No output dependent on input pin "psw_c1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 45
+    Warning (15610): No output dependent on input pin "psw_c2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 46
+    Warning (15610): No output dependent on input pin "psw_c3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 47
+    Warning (15610): No output dependent on input pin "psw_d0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 49
+    Warning (15610): No output dependent on input pin "psw_d1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 50
+    Warning (15610): No output dependent on input pin "psw_d2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 51
+    Warning (15610): No output dependent on input pin "psw_d3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 52
+    Warning (15610): No output dependent on input pin "hex_a[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 54
+    Warning (15610): No output dependent on input pin "hex_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 54
+    Warning (15610): No output dependent on input pin "hex_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 54
+    Warning (15610): No output dependent on input pin "hex_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 54
+    Warning (15610): No output dependent on input pin "hex_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 55
+    Warning (15610): No output dependent on input pin "hex_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 55
+    Warning (15610): No output dependent on input pin "hex_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 55
+    Warning (15610): No output dependent on input pin "hex_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 55
+    Warning (15610): No output dependent on input pin "dip_a[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_a[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 56
+    Warning (15610): No output dependent on input pin "dip_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_b[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/phasegen_test.v Line: 57
+Info (21057): Implemented 228 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 47 input pins
+    Info (21059): Implemented 105 output pins
+    Info (21061): Implemented 76 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 123 warnings
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Wed Jun 08 16:52:29 2022
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:27
+
+

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Jun 09 16:13:27 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : kappa3_light
+Top-level Entity Name : kappa3_light
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 2,711 / 28,848 ( 9 % )
+    Total combinational functions : 2,193 / 28,848 ( 8 % )
+    Dedicated logic registers : 1,315 / 28,848 ( 5 % )
+Total registers : 1315
+Total pins : 152 / 329 ( 46 % )
+Total virtual pins : 0
+Total memory bits : 524,288 / 608,256 ( 86 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

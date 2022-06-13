@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kadai2
-Wed May 11 15:47:47 2022
+Wed Jun 01 15:16:19 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -47,7 +47,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 11 15:47:47 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 01 15:16:19 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; kadai2                                      ;
 ; Top-level Entity Name              ; kadai2                                      ;
@@ -167,16 +167,16 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; ../../hw2019/verilog-src/public/led_driver.v     ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/led_driver.v     ;         ;
-; ../../hw2019/verilog-src/templates/add4.v        ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/add4.v        ;         ;
-; ../../hw2019/verilog-src/public/kadai2.v         ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/kadai2.v         ;         ;
-; ../../hw2019/verilog-src/templates/decode_7seg.v ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/decode_7seg.v ;         ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; ../../hw2019/verilog-src/public/led_driver.v     ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v     ;         ;
+; ../../hw2019/verilog-src/templates/add4.v        ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/add4.v        ;         ;
+; ../../hw2019/verilog-src/public/kadai2.v         ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v         ;         ;
+; ../../hw2019/verilog-src/templates/decode_7seg.v ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v ;         ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -348,129 +348,129 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 11 15:47:29 2022
+    Info: Processing started: Wed Jun 01 15:16:02 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kadai2 -c kadai2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/led_driver.v
-    Info (12023): Found entity 1: led_driver File: Z:/hw2019/verilog-src/public/led_driver.v Line: 68
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/add4.v
-    Info (12023): Found entity 1: add4 File: Z:/hw2019/verilog-src/templates/add4.v Line: 17
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/kadai2.v
-    Info (12023): Found entity 1: kadai2 File: Z:/hw2019/verilog-src/public/kadai2.v Line: 33
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/decode_7seg.v
-    Info (12023): Found entity 1: decode_7seg File: Z:/hw2019/verilog-src/templates/decode_7seg.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/led_driver.v
+    Info (12023): Found entity 1: led_driver File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/add4.v
+    Info (12023): Found entity 1: add4 File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/add4.v Line: 17
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/kadai2.v
+    Info (12023): Found entity 1: kadai2 File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/decode_7seg.v
+    Info (12023): Found entity 1: decode_7seg File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v Line: 15
 Info (12127): Elaborating entity "kadai2" for the top level hierarchy
-Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 117
-Info (12128): Elaborating entity "add4" for hierarchy "add4:add4_inst" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 124
-Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode1" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 131
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 117
+Info (12128): Elaborating entity "add4" for hierarchy "add4:add4_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 124
+Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 131
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13000): Registers with preset signals will power-up high File: Z:/hw2019/verilog-src/public/led_driver.v Line: 200
+Info (13000): Registers with preset signals will power-up high File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 200
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_x[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_x[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 60
-    Warning (13410): Pin "seg_y[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "seg_y[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 62
-    Warning (13410): Pin "led_out[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "led_out[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 64
-    Warning (13410): Pin "seg_a[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 65
-    Warning (13410): Pin "seg_b[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_b[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 66
-    Warning (13410): Pin "seg_c[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 67
-    Warning (13410): Pin "seg_d[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_d[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 68
-    Warning (13410): Pin "seg_e[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 69
-    Warning (13410): Pin "seg_e[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 69
-    Warning (13410): Pin "seg_f[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_f[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 70
-    Warning (13410): Pin "seg_g[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 71
-    Warning (13410): Pin "seg_g[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 71
-    Warning (13410): Pin "seg_h[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai2.v Line: 72
+    Warning (13410): Pin "seg_x[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_x[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 60
+    Warning (13410): Pin "seg_y[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "seg_y[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 62
+    Warning (13410): Pin "led_out[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "led_out[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 64
+    Warning (13410): Pin "seg_a[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 65
+    Warning (13410): Pin "seg_b[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_b[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 66
+    Warning (13410): Pin "seg_c[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 67
+    Warning (13410): Pin "seg_d[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_d[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 68
+    Warning (13410): Pin "seg_e[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 69
+    Warning (13410): Pin "seg_e[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 69
+    Warning (13410): Pin "seg_f[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_f[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 70
+    Warning (13410): Pin "seg_g[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 71
+    Warning (13410): Pin "seg_g[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 71
+    Warning (13410): Pin "seg_h[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 72
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 36 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clock" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 35
-    Warning (15610): No output dependent on input pin "psw_a0" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 36
-    Warning (15610): No output dependent on input pin "psw_a1" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 37
-    Warning (15610): No output dependent on input pin "psw_a2" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 38
-    Warning (15610): No output dependent on input pin "psw_a3" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 39
-    Warning (15610): No output dependent on input pin "psw_b0" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 41
-    Warning (15610): No output dependent on input pin "psw_b1" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 42
-    Warning (15610): No output dependent on input pin "psw_b2" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 43
-    Warning (15610): No output dependent on input pin "psw_b3" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 44
-    Warning (15610): No output dependent on input pin "psw_b4" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 45
-    Warning (15610): No output dependent on input pin "psw_c0" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 46
-    Warning (15610): No output dependent on input pin "psw_c1" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 47
-    Warning (15610): No output dependent on input pin "psw_c2" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 48
-    Warning (15610): No output dependent on input pin "psw_c3" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 49
-    Warning (15610): No output dependent on input pin "psw_c4" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 50
-    Warning (15610): No output dependent on input pin "psw_d0" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 51
-    Warning (15610): No output dependent on input pin "psw_d1" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 52
-    Warning (15610): No output dependent on input pin "psw_d2" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 53
-    Warning (15610): No output dependent on input pin "psw_d3" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 54
-    Warning (15610): No output dependent on input pin "psw_d4" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 55
-    Warning (15610): No output dependent on input pin "dip_a[0]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[1]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[2]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[3]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[4]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[5]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[6]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[7]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_b[0]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[1]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[2]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[3]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[4]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[5]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[6]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[7]" File: Z:/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "clock" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 35
+    Warning (15610): No output dependent on input pin "psw_a0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 36
+    Warning (15610): No output dependent on input pin "psw_a1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 37
+    Warning (15610): No output dependent on input pin "psw_a2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 38
+    Warning (15610): No output dependent on input pin "psw_a3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 39
+    Warning (15610): No output dependent on input pin "psw_b0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 41
+    Warning (15610): No output dependent on input pin "psw_b1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 42
+    Warning (15610): No output dependent on input pin "psw_b2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 43
+    Warning (15610): No output dependent on input pin "psw_b3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 44
+    Warning (15610): No output dependent on input pin "psw_b4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 45
+    Warning (15610): No output dependent on input pin "psw_c0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 46
+    Warning (15610): No output dependent on input pin "psw_c1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 47
+    Warning (15610): No output dependent on input pin "psw_c2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 48
+    Warning (15610): No output dependent on input pin "psw_c3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 49
+    Warning (15610): No output dependent on input pin "psw_c4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 50
+    Warning (15610): No output dependent on input pin "psw_d0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 51
+    Warning (15610): No output dependent on input pin "psw_d1" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 52
+    Warning (15610): No output dependent on input pin "psw_d2" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 53
+    Warning (15610): No output dependent on input pin "psw_d3" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 54
+    Warning (15610): No output dependent on input pin "psw_d4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 55
+    Warning (15610): No output dependent on input pin "dip_a[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai2.v Line: 59
 Info (21057): Implemented 248 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 47 input pins
     Info (21059): Implemented 105 output pins
     Info (21061): Implemented 96 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Wed May 11 15:47:47 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4763 megabytes
+    Info: Processing ended: Wed Jun 01 15:16:19 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:37
 
 

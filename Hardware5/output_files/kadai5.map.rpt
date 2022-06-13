@@ -1,5 +1,5 @@
 Analysis & Synthesis report for kadai5
-Mon May 23 14:41:12 2022
+Wed Jun 01 15:34:21 2022
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -21,6 +21,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  13. Post-Synthesis Netlist Statistics for Top Partition
  14. Elapsed Time Per Partition
  15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -46,7 +47,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon May 23 14:41:12 2022       ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 01 15:34:21 2022       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; kadai5                                      ;
 ; Top-level Entity Name              ; kadai5                                      ;
@@ -166,19 +167,19 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                  ; Library ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
-; ../../hw2019/verilog-src/public/syncro.v         ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/syncro.v         ;         ;
-; ../../hw2019/verilog-src/templates/decode_7seg.v ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/decode_7seg.v ;         ;
-; ../../hw2019/verilog-src/templates/keyenc.v      ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/keyenc.v      ;         ;
-; ../../hw2019/verilog-src/templates/keybuf.v      ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/keybuf.v      ;         ;
-; ../../hw2019/verilog-src/templates/calc.v        ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/templates/calc.v        ;         ;
-; ../../hw2019/verilog-src/public/led_driver.v     ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/led_driver.v     ;         ;
-; ../../hw2019/verilog-src/public/kadai5.v         ; yes             ; User Verilog HDL File  ; Z:/hw2019/verilog-src/public/kadai5.v         ;         ;
-+--------------------------------------------------+-----------------+------------------------+-----------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                 ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                ; Library ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
+; ../../hw2019/verilog-src/public/syncro.v         ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v         ;         ;
+; ../../hw2019/verilog-src/templates/decode_7seg.v ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v ;         ;
+; ../../hw2019/verilog-src/templates/keyenc.v      ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v      ;         ;
+; ../../hw2019/verilog-src/templates/keybuf.v      ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keybuf.v      ;         ;
+; ../../hw2019/verilog-src/templates/calc.v        ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v        ;         ;
+; ../../hw2019/verilog-src/public/led_driver.v     ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v     ;         ;
+; ../../hw2019/verilog-src/public/kadai5.v         ; yes             ; User Verilog HDL File  ; C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v         ;         ;
++--------------------------------------------------+-----------------+------------------------+-----------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -367,107 +368,114 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon May 23 14:40:55 2022
+    Info: Processing started: Wed Jun 01 15:34:03 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off kadai5 -c kadai5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/syncro.v
-    Info (12023): Found entity 1: syncro File: Z:/hw2019/verilog-src/public/syncro.v Line: 18
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/decode_7seg.v
-    Info (12023): Found entity 1: decode_7seg File: Z:/hw2019/verilog-src/templates/decode_7seg.v Line: 15
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/keyenc.v
-    Info (12023): Found entity 1: keyenc File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 16
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/keybuf.v
-    Info (12023): Found entity 1: keybuf File: Z:/hw2019/verilog-src/templates/keybuf.v Line: 19
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/templates/calc.v
-    Info (12023): Found entity 1: calc File: Z:/hw2019/verilog-src/templates/calc.v Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/led_driver.v
-    Info (12023): Found entity 1: led_driver File: Z:/hw2019/verilog-src/public/led_driver.v Line: 68
-Info (12021): Found 1 design units, including 1 entities, in source file /hw2019/verilog-src/public/kadai5.v
-    Info (12023): Found entity 1: kadai5 File: Z:/hw2019/verilog-src/public/kadai5.v Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/syncro.v
+    Info (12023): Found entity 1: syncro File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/syncro.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/decode_7seg.v
+    Info (12023): Found entity 1: decode_7seg File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/decode_7seg.v Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/keyenc.v
+    Info (12023): Found entity 1: keyenc File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/keybuf.v
+    Info (12023): Found entity 1: keybuf File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keybuf.v Line: 19
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/templates/calc.v
+    Info (12023): Found entity 1: calc File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/led_driver.v
+    Info (12023): Found entity 1: led_driver File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file /users/saule/documents/quartus/hw2019/verilog-src/public/kadai5.v
+    Info (12023): Found entity 1: kadai5 File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 33
 Info (12127): Elaborating entity "kadai5" for the top level hierarchy
-Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 117
-Info (12128): Elaborating entity "syncro" for hierarchy "syncro:syncro_a0" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 141
-Info (12128): Elaborating entity "calc" for hierarchy "calc:calc_inst" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 173
-Warning (10776): Verilog HDL warning at calc.v(36): variable tf in static task or function tf may have unintended latch behavior File: Z:/hw2019/verilog-src/templates/calc.v Line: 36
-Warning (10241): Verilog HDL Function Declaration warning at calc.v(36): function "tf" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function File: Z:/hw2019/verilog-src/templates/calc.v Line: 36
-Warning (10030): Net "tf" at calc.v(36) has no driver or initial value, using a default initial value '0' File: Z:/hw2019/verilog-src/templates/calc.v Line: 36
-Info (12128): Elaborating entity "keyenc" for hierarchy "calc:calc_inst|keyenc:eee" File: Z:/hw2019/verilog-src/templates/calc.v Line: 43
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(33): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 33
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(34): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 34
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(35): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 35
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(36): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 36
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(37): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 37
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(38): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 38
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(39): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 39
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(40): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 40
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(41): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 41
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(42): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 42
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(43): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 43
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(44): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 44
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(45): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 45
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(46): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 46
-Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(47): casex/casez item expression overlaps with a previous casex/casez item expression File: Z:/hw2019/verilog-src/templates/keyenc.v Line: 47
-Info (12128): Elaborating entity "keybuf" for hierarchy "calc:calc_inst|keybuf:bbb" File: Z:/hw2019/verilog-src/templates/calc.v Line: 45
-Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode_7seg_inst0" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 184
-Info (13000): Registers with preset signals will power-up high File: Z:/hw2019/verilog-src/public/led_driver.v Line: 200
+Info (12128): Elaborating entity "led_driver" for hierarchy "led_driver:led_driver_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 117
+Info (12128): Elaborating entity "syncro" for hierarchy "syncro:syncro_a0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 141
+Info (12128): Elaborating entity "calc" for hierarchy "calc:calc_inst" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 173
+Warning (10776): Verilog HDL warning at calc.v(36): variable tf in static task or function tf may have unintended latch behavior File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 36
+Warning (10241): Verilog HDL Function Declaration warning at calc.v(36): function "tf" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 36
+Warning (10030): Net "tf" at calc.v(36) has no driver or initial value, using a default initial value '0' File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 36
+Info (12128): Elaborating entity "keyenc" for hierarchy "calc:calc_inst|keyenc:eee" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 43
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(33): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 33
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(34): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 34
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(35): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 35
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(36): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 36
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(37): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 37
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(38): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 38
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(39): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 39
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(40): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 40
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(41): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 41
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(42): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 42
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(43): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 43
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(44): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 44
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(45): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 45
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(46): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 46
+Warning (10935): Verilog HDL Casex/Casez warning at keyenc.v(47): casex/casez item expression overlaps with a previous casex/casez item expression File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/keyenc.v Line: 47
+Info (12128): Elaborating entity "keybuf" for hierarchy "calc:calc_inst|keybuf:bbb" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/templates/calc.v Line: 45
+Info (12128): Elaborating entity "decode_7seg" for hierarchy "decode_7seg:decode_7seg_inst0" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 184
+Info (13000): Registers with preset signals will power-up high File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/led_driver.v Line: 200
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "seg_x[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 60
-    Warning (13410): Pin "seg_y[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 62
-    Warning (13410): Pin "led_out[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[1]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[2]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[3]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[4]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[5]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[6]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "led_out[7]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 64
-    Warning (13410): Pin "seg_a[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 65
-    Warning (13410): Pin "seg_b[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 66
-    Warning (13410): Pin "seg_c[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 67
-    Warning (13410): Pin "seg_d[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 68
-    Warning (13410): Pin "seg_e[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 69
-    Warning (13410): Pin "seg_f[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 70
-    Warning (13410): Pin "seg_g[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 71
-    Warning (13410): Pin "seg_h[0]" is stuck at GND File: Z:/hw2019/verilog-src/public/kadai5.v Line: 72
+    Warning (13410): Pin "seg_x[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 60
+    Warning (13410): Pin "seg_y[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 62
+    Warning (13410): Pin "led_out[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[1]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[2]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[3]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[4]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[5]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[6]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "led_out[7]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 64
+    Warning (13410): Pin "seg_a[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 65
+    Warning (13410): Pin "seg_b[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 66
+    Warning (13410): Pin "seg_c[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 67
+    Warning (13410): Pin "seg_d[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 68
+    Warning (13410): Pin "seg_e[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 69
+    Warning (13410): Pin "seg_f[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 70
+    Warning (13410): Pin "seg_g[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 71
+    Warning (13410): Pin "seg_h[0]" is stuck at GND File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 72
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/saule/Documents/Quartus/schoolpc/Hardware5/output_files/kadai5.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 25 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "psw_c4" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 50
-    Warning (15610): No output dependent on input pin "hex_a[0]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 56
-    Warning (15610): No output dependent on input pin "hex_a[1]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 56
-    Warning (15610): No output dependent on input pin "hex_a[2]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 56
-    Warning (15610): No output dependent on input pin "hex_a[3]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 56
-    Warning (15610): No output dependent on input pin "hex_b[0]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 57
-    Warning (15610): No output dependent on input pin "hex_b[1]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 57
-    Warning (15610): No output dependent on input pin "hex_b[2]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 57
-    Warning (15610): No output dependent on input pin "hex_b[3]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 57
-    Warning (15610): No output dependent on input pin "dip_a[0]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[1]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[2]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[3]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[4]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[5]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[6]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_a[7]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 58
-    Warning (15610): No output dependent on input pin "dip_b[0]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[1]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[2]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[3]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[4]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[5]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[6]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
-    Warning (15610): No output dependent on input pin "dip_b[7]" File: Z:/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "psw_c4" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 50
+    Warning (15610): No output dependent on input pin "hex_a[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 56
+    Warning (15610): No output dependent on input pin "hex_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 57
+    Warning (15610): No output dependent on input pin "hex_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 57
+    Warning (15610): No output dependent on input pin "dip_a[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_a[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 58
+    Warning (15610): No output dependent on input pin "dip_b[0]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[1]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[2]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[3]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[4]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[5]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[6]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
+    Warning (15610): No output dependent on input pin "dip_b[7]" File: C:/Users/saule/Documents/Quartus/hw2019/verilog-src/public/kadai5.v Line: 59
 Info (21057): Implemented 622 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 47 input pins
     Info (21059): Implemented 105 output pins
     Info (21061): Implemented 470 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 64 warnings
-    Info: Peak virtual memory: 4808 megabytes
-    Info: Processing ended: Mon May 23 14:41:12 2022
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4765 megabytes
+    Info: Processing ended: Wed Jun 01 15:34:21 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:40
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/saule/Documents/Quartus/schoolpc/Hardware5/output_files/kadai5.map.smsg.
 
 

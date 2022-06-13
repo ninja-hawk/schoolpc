@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE30F23) Path("Z:/schoolpc/Hardware5/output_files/") File("kadai5.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE30F23) Path("C:/Users/saule/Documents/Quartus/schoolpc/Hardware5/output_files/") File("kadai5.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
