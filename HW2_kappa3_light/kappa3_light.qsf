@@ -55,6 +55,13 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/kappa3_light_core.v"
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/controller.v"
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/stconv.v"
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/phasegen.v"
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/ldconv.v"
+set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/alu.v"
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/decode_7seg.v"
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/keyenc.v"
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/templates/keybuf.v"
@@ -67,4 +74,3 @@ set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/led_dr
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/kappa3_light_core_dp.v"
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/debugger.v"
 set_global_assignment -name VERILOG_FILE "../../hw2019/verilog-src/public/kappa3_light.v"
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
